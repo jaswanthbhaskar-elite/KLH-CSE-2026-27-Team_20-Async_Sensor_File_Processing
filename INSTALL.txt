@@ -1,0 +1,16 @@
+AFPS COMPLETE PROJECT — RECENT ACTIVITY FIX
+
+Extract this ZIP into the EXISTING async_file_Server/async_file_Server folder and allow
+overwriting. Do NOT delete the existing results/ folder; it contains benchmark CSV history.
+
+From the project root in Ubuntu/WSL:
+  cd webui
+  npm install --no-audit --no-fund
+  npm run build
+  cd ..
+  ./deploy/run-dev.sh sync
+
+Open http://localhost:3000 and press Ctrl+Shift+R.
+
+Recent Activity now updates immediately from READ, WRITE, RESET, BENCHREAD, BENCHWRITE,
+and BURST responses. Polling remains as a fallback.

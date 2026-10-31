@@ -1,0 +1,21 @@
+﻿# Node.js dependencies
+node_modules/
+
+# Frontend build output
+dist/
+
+# Local development runtime
+.dev/server
+.dev/data/
+
+# Compiled C binaries
+server
+client
+
+# Logs
+*.log
+
+# OS/editor files
+.DS_Store
+Thumbs.db
+.vscode/

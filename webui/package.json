@@ -1,0 +1,19 @@
+{
+  "name": "afps-webui",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Web console for the Asynchronous File Processing Server",
+  "scripts": {
+    "start": "node bridge/server.js",
+    "build": "node build.cjs",
+    "dev": "node build.cjs --watch"
+  },
+  "engines": { "node": ">=16" },
+  "dependencies": {
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  },
+  "devDependencies": {
+    "esbuild": "^0.25.0"
+  }
+}

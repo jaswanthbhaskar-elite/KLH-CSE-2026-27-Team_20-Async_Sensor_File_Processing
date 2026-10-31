@@ -1,0 +1,25 @@
+Recent Activity dashboard update
+
+Apply this patch by extracting the ZIP into your existing project root:
+  .../async_file_Server/async_file_Server/
+
+Allow overwrite of these files:
+  webui/bridge/server.js
+  webui/src/App.jsx
+  webui/src/Burst.jsx
+  webui/src/ActivityLog.jsx
+  webui/src/styles.css
+
+Then rebuild the frontend from WSL:
+  cd /mnt/c/Users/Jaswa/Desktop/async_file_Server/async_file_Server/webui
+  npm run build
+
+Stop the running dashboard with Ctrl+C and restart from the project root:
+  cd ..
+  ./deploy/run-dev.sh sync
+
+Use ./deploy/run-dev.sh async for ASYNC mode.
+
+The activity log now receives completed burst entries immediately, displays mode/workload,
+and lets you expand a burst row to inspect each READ/WRITE request. Existing CSV history
+is not modified by this patch. Do not run `make clean` just to apply this update.
